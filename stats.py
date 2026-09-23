@@ -1,9 +1,7 @@
 def sort_on(items):
     return items["num"]
 
-
 def parse_dict(dic):
-    # print(dict)
     array_dic = []
     for k, v in dic.items():
         array_dic.append({"char": k, "num": v}) 
@@ -20,7 +18,6 @@ def get_book_data(path):
     with open(path) as f:
         text = f.read().lower()
         return get_num_and_dic(text)
-
 
 def get_num_and_dic(text):
     return len(text.split()), get_book_dict(text)

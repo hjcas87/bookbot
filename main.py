@@ -8,7 +8,7 @@ def main():
         sys.exit(1)
     else:
         num, dic = get_book_data(sys.argv[1])
-        print(f"============ BOOKBOT ============\n Analyzing book found at books/frankenstein.txt...\n ----------- Word Count ----------\n Found {num} total words\n --------- Character Count -------")
+        print(f"============ BOOKBOT ============\n Analyzing book found at {sys.argv[1]}...\n ----------- Word Count ----------\n Found {num} total words\n --------- Character Count -------")
         for items in dic:
             if items["char"].isalpha():
                 print(f"{items['char']}: {items['num']}")
